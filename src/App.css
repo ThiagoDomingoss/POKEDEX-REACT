@@ -1,38 +1,201 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav{
+  display: flex;
+  justify-content: center;
+}
+.navbar-img{
+  width: 250px;
+  margin: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.searchbar-container{
+  display: flex;
+  align-items: center;
+  margin: 20px;
+}
+.searchbar input{
+ padding: 10px;
+ border-radius: 5px;
+ border: solid rgb(66, 68, 204);
+ outline-color: rgb(66, 68, 204);
+ color: rgb(66, 68, 204);
+ font-weight: bold;
+ font-size: 16px;
+}
+.searchbar-btn button{
+  position: relative;
+  margin-left: -7px;
+  padding: 10px;
+  background-color: gold;
+  color: rgb(66, 68, 204);
+  font-weight: bold;
+  font-size: 18px;
+  border: solid rgb(66, 68, 204);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.searchbar-btn button:hover{
+  transition: 0.3s;
+  transform: scale(1.25);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pokedex-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.pokedex-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+.pokemon-card{
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 10px;
+  position: relative;
+  color: aliceblue;
+}
+.pokemon-card:hover{
+  transition: 0.3s;
+  transform: scale(1.1);
+  z-index: 1;
+}
+.bug{
+  background: url(../public/assets/background/bug.jpg);
+  background-size: cover;
+}
+.dark{
+  background: url(../public/assets/background/dark.jpg);
+  background-size: cover;
+}
+.dragon{
+  background: url(../public/assets/background/dragon.jpg);
+  background-size: cover;
+}
+.electric{
+  background: url(../public/assets/background/electric.jpg);
+  background-size: cover;
+}
+.fairy{
+  background: url(../public/assets/background/fairy.jpg);
+  background-size: cover;
+}
+.fighting{
+  background: url(../public/assets/background/fighting.jpg);
+  background-size: cover;
+}
+.fire{
+  background: url(../public/assets/background/fire.jpg);
+  background-size: cover;
+}
+.flying{
+  background: url(../public/assets/background/flying.jpg);
+  background-size: cover;
+}
+.ghost{
+  background: url(../public/assets/background/ghost.jpg);
+  background-size: cover;
+}
+.grass{
+  background: url(../public/assets/background/grass.jpg);
+  background-size: cover;
+}
+.ground{
+  background: url(../public/assets/background/ground.jpg);
+  background-size: cover;
+}
+.ice{
+  background: url(../public/assets/background/ice.jpg);
+  background-size: cover;
+}
+.normal{
+  background: url(../public/assets/background/normal.jpg);
+  background-size: cover;
+}
+.psychic{
+  background: url(../public/assets/background/psychic.jpg);
+  background-size: cover;
+}
+.poison{
+  background: url(../public/assets/background/poison.jpg);
+  background-size: cover;
+}
+.rock{
+  background: url(../public/assets/background/rock.jpg);
+  background-size: cover;
+}
+.steel{
+  background: url(../public/assets/background/steel.jpg);
+  background-size: cover;
+}
+.water{
+  background: url(../public/assets/background/water.jpg);
+  background-size: cover;
+}
+
+.info-container{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  padding: 15px;
+}
+.pokemon-image-container{
+  width: 150px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.pokemon-image-container img{
+  transform:scale(0.8)
+}
+.pokemon-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+.pokemon-type-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.pokemon-type{
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.pagination-container{
+  display: flex;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.not-found{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-size: 3rem;
+  font-weight: bold;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-size: 3rem;
+  font-weight: bold;
 }
