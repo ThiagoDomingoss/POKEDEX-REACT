@@ -18,7 +18,7 @@ const Searchbar = (props) => {
   return (
     <div className="searchbar-container">
       <div className="searchbar">
-        <input type="search" placeholder=" Search" onChange={onChangeHandler} />
+        <input type="search" placeholder=" Search..." onChange={onChangeHandler} />
       </div>
       <div className="searchbar-btn">
         <button onClick={iChooseYou}>I choose you !</button>

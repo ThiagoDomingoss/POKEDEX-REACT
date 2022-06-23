@@ -7,6 +7,7 @@
 nav{
   display: flex;
   justify-content: center;
+  background-color: #CF1020;
 }
 .navbar-img{
   width: 250px;
@@ -15,12 +16,14 @@ nav{
 
 .searchbar-container{
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  margin: 20px;
+  padding: 20px 35px;
+  background-color: #990000;
 }
 .searchbar input{
  padding: 10px;
- border-radius: 5px;
+ border-radius: 10px;
  border: solid rgb(66, 68, 204);
  outline-color: rgb(66, 68, 204);
  color: rgb(66, 68, 204);
@@ -50,6 +53,33 @@ nav{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  background-color: #990000;
+  border-radius: 20px;
+  width: 97%;
+  margin: 20px auto;
+}
+.light{
+  display: flex;
+  gap: 15px;
+}
+.pokelight{
+  background-color: #007FFF;
+  width: 50px;
+  height: 50px;
+  border: 5px solid grey;
+  border-radius: 50%;
+  position: relative;
+}
+.pokelight::before{
+  content: '';
+  background: #6CB4EE;
+  width: 35px;
+  height: 32px;
+  position: absolute;
+  border-radius: 50%;
+}
+.pokedex-title h1{
+  color: aliceblue;
 }
 .pokedex-grid{
   display: flex;
@@ -181,6 +211,18 @@ nav{
 .pagination-container{
   display: flex;
   align-items: center;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: bold;
+  gap: 10px;
+}
+.pagination-container button{
+  background-color: #CF1020;
+  color: aliceblue;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+
 }
 
 .not-found{
