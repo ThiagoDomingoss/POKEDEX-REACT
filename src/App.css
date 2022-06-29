@@ -16,10 +16,20 @@ nav{
 
 .searchbar-container{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
   padding: 20px 35px;
   background-color: #990000;
+}
+.searchbar-content{
+  display: flex;
+  align-items: center;
+}
+.favorites{
+  display: flex;
+  align-items: center;
+  color: aliceblue;
+  gap: 10px
 }
 .searchbar input{
  padding: 10px;
@@ -195,8 +205,12 @@ nav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
   align-items: center;
+}
+.heart{
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 .pokemon-type-container{
   display: flex;
@@ -240,4 +254,17 @@ nav{
   margin-top: 150px;
   font-size: 3rem;
   font-weight: bold;
+}
+
+@media(max-width: 620px){
+  .searchbar-container{
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media(max-width: 500px){
+  .pokedex-title{
+    flex-direction: column;
+    gap: 30px;
+  }
 }

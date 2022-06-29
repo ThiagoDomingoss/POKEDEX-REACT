@@ -4,6 +4,7 @@ import Searchbar from "./components/Searchbar";
 import Pokedex from "./components/Pokedex";
 import { getPokemonData, getPokemons, searchPokemon } from "./Api";
 import "./App.css";
+import { FavoritesProvider} from "./context/ContextFavorites";
 
 function App() {
 
@@ -58,6 +59,7 @@ function App() {
   }
 
   return (
+    <FavoritesProvider>
     <>
       <Navbar />
       <Searchbar onSearch={onSearchHandler}/>
@@ -79,6 +81,7 @@ function App() {
       )}
       
     </>
+    </FavoritesProvider>
   );
 }
 

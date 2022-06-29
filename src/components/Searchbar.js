@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { BsHeartFill } from "react-icons/bs";
+import { FavoritesContext } from "../context/ContextFavorites";
 
 const Searchbar = (props) => {
   const [search, setSearch] = useState("");
   const {onSearch} = props;
+  const [favorites] = useContext(FavoritesContext)
 
   const onChangeHandler = (e) => {
     setSearch(e.target.value);
@@ -17,11 +20,18 @@ const Searchbar = (props) => {
 
   return (
     <div className="searchbar-container">
+      <div className="favorites">
+        <h2>Favorites</h2>
+        <BsHeartFill/>
+        <h2>{favorites.length}</h2>
+      </div>
+      <div className="searchbar-content">
       <div className="searchbar">
         <input type="search" placeholder=" Search..." onChange={onChangeHandler} />
       </div>
       <div className="searchbar-btn">
         <button onClick={iChooseYou}>I choose you !</button>
+      </div>
       </div>
     </div>
   );
