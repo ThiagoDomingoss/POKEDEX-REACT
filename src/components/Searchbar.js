@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { BsHeartFill } from "react-icons/bs";
 import { FavoritesContext } from "../context/ContextFavorites";
+import { Link } from "react-router-dom";
 
 const Searchbar = (props) => {
   const [search, setSearch] = useState("");
@@ -20,11 +21,13 @@ const Searchbar = (props) => {
 
   return (
     <div className="searchbar-container">
+      <Link to="/favorites">
       <div className="favorites">
         <h2>Favorites</h2>
         <BsHeartFill/>
         <h2>{favorites.length}</h2>
       </div>
+      </Link>
       <div className="searchbar-content">
       <div className="searchbar">
         <input type="search" placeholder=" Search..." onChange={onChangeHandler} />

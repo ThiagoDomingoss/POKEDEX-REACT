@@ -19,10 +19,7 @@ const Pokemon = (props) => {
         }
     }
     
-    useEffect(() => {
-        const poke = JSON.parse(localStorage.getItem('poke'))?? []
-        setFavorites(poke);
-    }, [])
+    
 
     const favorite = favorites.includes(pokemon.name) ? (<BsHeartFill/>) : (<BsHeart/>);
 

@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+}
 
 nav{
   display: flex;
@@ -29,7 +32,10 @@ nav{
   display: flex;
   align-items: center;
   color: aliceblue;
-  gap: 10px
+  gap: 10px;
+  background-color: #CF1020;
+  padding: 7px 14px;
+  border-radius: 7px;
 }
 .searchbar input{
  padding: 10px;
@@ -239,15 +245,7 @@ nav{
 
 }
 
-.not-found{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
-  font-size: 3rem;
-  font-weight: bold;
-}
-.loading{
+.not-found, .loading{
   display: flex;
   justify-content: center;
   align-items: center;
