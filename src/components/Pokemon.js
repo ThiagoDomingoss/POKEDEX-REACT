@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { BsHeartFill, BsHeart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import { FavoritesContext } from "../context/ContextFavorites";
 
 const Pokemon = (props) => {
@@ -25,14 +26,17 @@ const Pokemon = (props) => {
 
     
     return(
+        
         <div className={`pokemon-card ${pokemon.types[0].type.name}`}>
+            <Link to={`/status/${pokemon.id}`}>
             <div className="pokemon-image-container">
                 <img alt={pokemon.name} src={`../assets/sprites3d/${pokemon.name}.gif`} />
             </div>
+            </Link>
             <div className="info-container">
                 <div className="pokemon-content">
                     <h5>{pokemon.id}º</h5>
-                    <div className="heart" onClick={updateFavorites}>{favorite}</div>
+                    <button className="heart" onClick={updateFavorites}>{favorite}</button>
                     <h4>{pokemon.name}</h4>
                 </div>
                 <div className="pokemon-type-container">
@@ -46,6 +50,7 @@ const Pokemon = (props) => {
                 </div>
             </div>
         </div>
+        
     )
 
 }

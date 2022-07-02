@@ -1,5 +1,7 @@
 import React from "react";
 import Pokemon from "./Pokemon";
+import { BsArrowLeftSquare } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const PokedexFavorite = (props) => {
     const {pokemons, loading} = props
@@ -12,6 +14,7 @@ const PokedexFavorite = (props) => {
                 <div className="pokelight"></div>
                 <h1>Favorites</h1>
                 </div>
+                <Link to="/home"><div className="arrowback"><BsArrowLeftSquare/> Back</div></Link>
             </div>
             {loading ? 
             (<div className="loading">Loading...</div>) :

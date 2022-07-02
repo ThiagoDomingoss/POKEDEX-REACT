@@ -3,7 +3,9 @@ import Navbar from "../components/Navbar";
 import "../App.css";
 import { searchPokemon } from "../Api";
 import PokedexFavorite from "../components/PokedexFavorite";
-import { FavoritesContext} from "../context/ContextFavorites"
+import { FavoritesContext} from "../context/ContextFavorites";
+import { BsArrowLeftSquare } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function Favorites() {
 
@@ -34,7 +36,6 @@ function Favorites() {
 
   useEffect(() => {  
     fetchPokemons()
-    console.log(favorites);
   }, [favorites])
 
 
@@ -44,6 +45,7 @@ function Favorites() {
       <Navbar />
       {favorites.length === 0 ? 
         (<div className="not-found">
+          <Link to="/home"><div className="arrowback"><BsArrowLeftSquare/></div></Link>
             <div>
             <img alt={"mimikyu"} src={"/assets/sprites3d/mimikyu.gif"}/>
             </div>
