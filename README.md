@@ -6,19 +6,20 @@
 
 - REACT
 - REACT HOOKS
-- useState
-- useEffecs
+- REACT CONTEXT
+- REACT ROUTER
 - FETCH API
 - PROMISES
 - ASYNC/AWAIT
 
-## EM BREVE: PÁGINA COM STATUS DOS POKEMONS
 
-- REACT ROUTER
+## CRÉDITOS 
 
-## CRÉDITOS DAS SPRITES 3D
+- SPRITES 3D: https://www.pkparaiso.com/xy/sprites_pokemon.php
+- API: https://pokeapi.co/
 
-- https://www.pkparaiso.com/xy/sprites_pokemon.php
+## DEPLOY DA APLICAÇÃO
+- netlify: https://react-pokedex-api.netlify.app/
 
 ### 🎲 Rodando o Web
 
